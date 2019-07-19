@@ -3,29 +3,41 @@
   <head>
     <title>Reserv.ly</title>
     <style>
-      .main {
+      .row {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
+        max-width: 992px;
+        margin-left: auto;
+        margin-right: auto;
       }
-      .content {
+      .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .main {
         display: flex;
         flex-direction: column;
       }
     </style>
   </head>
   <body>
-    <div class="content">
-      <div id="photo-gallery"></div>
-      <div class="main">
-        <div id="menus"></div>
-        <div id="reservations"></div>
+    <div class="main">
+      <div class="col">
+        <div class="row">
+          <div id="reservations"></div>
+          <div class="col">
+            <div id="photo-gallery"></div>
+            <div id="menus"></div>
+            <div id="reviews"></div>
+          </div>
+        </div>
       </div>
-      <div id="reviews"></div>
     </div>
 
-    <script src="http://localhost:3001/bundle.js"></script>
-    <script src="http://localhost:3002/bundle.js"></script>
-    <script src="http://localhost:3003/bundle.js"></script>
-    <script src="http://localhost:3004/bundle.js"></script>
+    <script src="http://18.223.115.5/bundle.js"></script>
+    <script src="http://13.57.252.210/bundle.js"></script>
+    <script src="http://54.200.32.135/bundle.js"></script>
+    <script src="https://reservly-menus.s3-us-west-1.amazonaws.com/bundle.js"></script>
   </body>
 </html>
