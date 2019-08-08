@@ -3,9 +3,11 @@ const path = require('path');
 const redis = require('./redisConnection');
 const axios = require('axios');
 const httpProxy = require('http-proxy');
+const morgan = require('morgan');
 const apiProxy = httpProxy.createProxyServer();
 
 const app = express();
+app.use(morgan('dev'));
 app.get('/loaderio-4ae3a0d42365e328971e1716dd8aa7dd', (req, res) => {
   res.status(200).send('loaderio-4ae3a0d42365e328971e1716dd8aa7dd');
 });
