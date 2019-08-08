@@ -1,3 +1,4 @@
 node_modules
 package-lock.json
 sigsa7_proxy.pem
+newrelic_agent.log
