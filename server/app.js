@@ -9,6 +9,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, '/../public/')));
 app.use('/:restaurant_id', express.static(path.join(__dirname, '/../public/')));
 
+const photos = 'http://3.52.61.135';
 const reservations = 'http://18.217.25.48';
 const reviews = 'http://54.153.40.76';
 
@@ -58,10 +59,10 @@ app.get('/:restaurantId/reviews/restaurantInfo', (req, res) => {
   });
 });
 
-// app.all("/:restaurantID/images", function(req, res) {
-//     console.log('redirecting to photo-gallery api');
-//     apiProxy.web(req, res, {target: photos});
-// });
+app.all("/:restaurantID/images", function(req, res) {
+    console.log('redirecting to photo-gallery api');
+    apiProxy.web(req, res, {target: photos});
+});
 
 app.all('/booking/reserved/:restaurantID', function(req, res) {
   console.log('redirecting to reservation api');
