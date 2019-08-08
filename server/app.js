@@ -6,6 +6,9 @@ const axios = require('axios');
 // const apiProxy = httpProxy.createProxyServer();
 
 const app = express();
+app.get('/loaderio-4ae3a0d42365e328971e1716dd8aa7dd', (req, res) => {
+  res.status(200).send('loaderio-4ae3a0d42365e328971e1716dd8aa7dd');
+});
 app.use(express.static(path.join(__dirname, '/../public/')));
 app.use('/:restaurant_id', express.static(path.join(__dirname, '/../public/')));
 
@@ -13,9 +16,6 @@ const photos = 'http://13.52.61.135';
 const reservations = 'http://18.217.25.48';
 const reviews = 'http://54.153.40.76';
 
-app.get('loaderio-4ae3a0d42365e328971e1716dd8aa7dd', (req, res) => {
-  res.status(200).send('loaderio-4ae3a0d42365e328971e1716dd8aa7dd');
-});
 
 app.get('/:restaurantId/reviews/reviewListing', (req, res) => {
   const { restaurantId } = req.params;
