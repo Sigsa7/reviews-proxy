@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, '/../public/')));
 app.use('/:restaurant_id', express.static(path.join(__dirname, '/../public/')));
 
-const photos = 'http://3.52.61.135';
+const photos = 'http://13.52.61.135';
 const reservations = 'http://18.217.25.48';
 const reviews = 'http://54.153.40.76';
 
