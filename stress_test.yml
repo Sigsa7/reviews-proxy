@@ -1,0 +1,24 @@
+config:
+  target: "http://localhost:3000"
+  processor: "./stressTestFunctions.js"
+  ensure:
+    p95: 2000
+  phases:
+    - duration: 30
+      arrivalRate: 10
+scenarios:
+  - name: "Get Reviews and info for A Restaurant"
+    flow:
+      - function: "generateGetRequestData"
+      - loop:
+        - get:
+            url: "/{{ restaurantId }}/reviews/reviewListing"
+            json:
+              sort: "{{ sort }}"
+              star: "{{ star }}"
+              keywords: "{{ keywords }}"
+        count: 100
+      - loop:
+        - get:
+            url: "/{{ restaurantId }}/reviews/restaurantInfo"
+        count: 100

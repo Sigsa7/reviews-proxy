@@ -19,7 +19,9 @@
   "homepage": "https://github.com/reservly/poema-demo#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "faker": "^4.1.0",
     "http-proxy": "^1.17.0",
+    "newrelic": "^5.11.0",
     "nodemon": "^1.19.1"
   }
 }
