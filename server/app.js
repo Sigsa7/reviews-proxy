@@ -2,8 +2,8 @@ const express = require('express');
 const path = require('path');
 const redis = require('./redisConnection');
 const axios = require('axios');
-// const httpProxy = require('http-proxy');
-// const apiProxy = httpProxy.createProxyServer();
+const httpProxy = require('http-proxy');
+const apiProxy = httpProxy.createProxyServer();
 
 const app = express();
 app.get('/loaderio-4ae3a0d42365e328971e1716dd8aa7dd', (req, res) => {
