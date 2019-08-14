@@ -7,7 +7,7 @@ const morgan = require('morgan');
 const apiProxy = httpProxy.createProxyServer();
 
 const app = express();
-app.use(morgan('dev'))
+// app.use(morgan('dev'))
 app.get(`/${process.env.LOADERIO}`, (req, res) => {
   res.status(200).send(`${process.env.LOADERIO}`);
 });
