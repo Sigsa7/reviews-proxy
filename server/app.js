@@ -16,7 +16,7 @@ app.use('/:restaurant_id', express.static(path.join(__dirname, '/../public/')));
 
 const photos = 'http://13.52.61.135';
 const reservations = 'http://18.217.25.48';
-const reviews = 'http://54.153.40.76';
+const reviews = 'http://54.153.60.8';
 
 
 app.get('/:restaurantId/reviews/reviewListing', (req, res) => {
